@@ -1,0 +1,29 @@
+
+{% include 'regheader.html' %}
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+
+<h2>Select Degree</h2>
+<table style="width:100%" class="table">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+
+
+  </tr>
+{% for data in cdata %}
+  <tr>
+
+    <td>  {{data['name']}}  </td>
+    <td>{{data['description']}}</td>
+    <td>
+      <a href="/reg_stud_form_link?id={{ data['iddegree'] }}" >register</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+
+
+{% include 'PageFooter.html' %}

@@ -1,0 +1,46 @@
+
+{% include 'adminheader.html' %}
+
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+  <h2>Register Staff</h2>
+<form action="/reg_staff" method="post">
+
+<table class="table">
+
+  <tr>
+    <th><label class="text-success">User Id :</label></th>
+    <td><input type="text" name="userid" required></td>
+
+  </tr>
+  <tr>
+    <th><label class="text-success">Name :</label></th>
+    <td><input type="text" name="name" required></td>
+  </tr>
+  <tr>
+    <th><label class="text-success">Address :</label></th>
+    <td><input type="text" name="address" required></td>
+  </tr>
+  <tr>
+    <th><label class="text-success">Email :</label></th>
+    <td><input type="text" name="email" required></td>
+  </tr>
+  <tr>
+    <th><label class="text-success">Phone :</label></th>
+    <td><input type="text" name="phone" required></td>
+  </tr>
+  <tr>
+    <th><label class="text-success">Password :</label></th>
+    <td><input type="text" name="password" required></td>
+  </tr>
+  <tr>
+    <th></th>
+    <td><input type="submit" value="Register" class="btn btn-primary"></td>
+  </tr>
+
+</table>
+</form>
+</div>
+{% include 'PageFooter.html' %}
+
+

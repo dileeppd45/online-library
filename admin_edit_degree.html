@@ -1,0 +1,26 @@
+
+{% include 'adminheader.html' %}
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+    <h2>Edit Degree</h2>
+  <form action="/admin_update_degree" method="post">
+<table style="width:80%" class="table">
+  <tr>
+      <input type="hidden" name="id" id="dd"value="{{ data['iddegree'] }}" required >
+    <td><label class="text-success">Degree Name :</label></td>
+    <td><input type="text" name="txtname" value="{{ data['name'] }}" required style="width:80%"></td>
+  </tr>
+  <tr>
+    <td><label class="text-success">Description :</label></td>
+    <td><input type="text" name="txtdes" value="{{ data['description'] }}" required style="width:80%"></td>
+  </tr>
+ <tr>
+     <td></td>
+    <td colspan="2"><input type="submit" value="Edit" class="btn btn-primary"></td>
+  </tr>
+
+</table>
+</form>
+
+</div>
+{% include 'PageFooter.html' %}

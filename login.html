@@ -1,0 +1,33 @@
+
+{% include 'logheader.html' %}
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+  <div>
+    <section id="login">
+
+    </section>
+<form action="login" method="post">
+
+  <h2 class="text-success center"><b>Login Form</b></h2>
+  <div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+    <table>
+    <tr><label  class="text-success" style="float:left; padding-left:15px;"><b>Username :</b></label></tr>
+    <tr><input type="text" placeholder="Enter Username" name="userid" required></tr>
+
+    <tr><label  class="text-success" style="float:left; padding-left:15px;"><b>Password :</b></label></tr>
+    <tr><input type="password" placeholder="Enter Password" name="password" required></tr>
+
+    <tr><button type="submit" class="btn btn-success">Login</button></tr>
+    </table>
+  </div>
+</form>
+
+
+</div>
+</div>
+{% include 'PageFooter.html' %}
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+
+{% include 'studentheader.html' %}
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+<h2>Registration Details</h2>
+<table  class="table">
+
+    <tr>
+        <th>Status</th>
+        <td> Congrats {{data['name']}} you are {{data['status']}} by management</td>
+    </tr>
+    <tr>
+        <th>Student Id</th>
+        <td>{{data['user_id']}}</td>
+    </tr>
+    <tr>
+        <th>Student Name</th>
+        <td>{{data['name']}}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{data['email']}}</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>{{data['address']}},pincode:{{data['pincode']}}</td>
+    </tr>
+    <tr>
+        <th>Contact</th>
+        <td>{{data['phone']}}</td>
+    </tr>
+    <tr>
+        <th>Password</th>
+        <td>{{data['password']}}</td>
+    </tr>
+</table>
+
+
+<h2>Welcome To Student View</h2>
+<table style="width:100%" class="table">
+    <tr>
+        <td><a href="/student_view_degree">Upload Notes..</a></td>
+    </tr>
+    <tr>
+        <td><a href="/student_cart_files">View Your Uploads..</a></td>
+    </tr>
+    <tr>
+        <td><a href="/student_view_degrees">View All Notes</a></td>
+    </tr>
+
+
+
+</table>
+</div>
+
+{% include 'PageFooter.html' %}

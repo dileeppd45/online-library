@@ -1,0 +1,24 @@
+
+{% include 'adminheader.html' %}
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+    <h2>Update Status</h2>
+<table class="table">
+    <form action="pending_updating_status_file" method="post">
+        <tr>
+            <td><label class="text-success">Status :</label></td>
+            <td>
+              <select id="status" name="status"  required >
+                <option value="{{ data['status']}}" selected>{{ data['status']}}(default)</option>
+                <option value="pending">pending</option>
+                <option value="approved">approved</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update" class="btn btn-primary"></td>
+        </tr>
+    </form>
+</table>
+</div>
+{% include 'PageFooter.html' %}

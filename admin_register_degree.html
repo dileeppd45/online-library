@@ -1,0 +1,27 @@
+
+{% include 'adminheader.html' %}
+
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+  <h2>Register Degree</h2>
+<form action="/register_degree" method="post">
+
+<table style="width:80%" class="table">
+  <tr>
+    <th><label class="text-success">Course Name :</label></th>
+    <td><input type="text" name="name" required style="width:80%"></td>
+  </tr>
+  <tr>
+    <th><label class="text-success">Course Description :</label></th>
+    <td><textarea id="description" name="txtdes" style="height:200px" required ></textarea></td>
+  </tr>
+  <tr>
+    <th></th>
+    <td colspan="2" ><input type="submit" value="Register" class="btn btn-primary"></td>
+  </tr>
+</table>
+</form>
+</div>
+{% include 'PageFooter.html' %}
+
+

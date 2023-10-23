@@ -1,0 +1,41 @@
+
+{% include 'adminheader.html' %}
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+  <h2>Edit Subject</h2>
+  <form action="/admin_update_subject" method="post">
+<table style="width:80%" class="table">
+
+    <input type="hidden" name="idsubject" value="{{ data['idsubject']}}">
+
+  <tr>
+    <th><label class="text-success">Name :</label></th>
+    <td><input type="text" value="{{ data['name'] }}" name="name" required></td>
+  </tr>
+  <tr>
+    <th><label class="text-success">Semester :</label></th>
+    <td>
+      <select  name="semester"  required >
+        <option value="{{ data['semester'] }}" selected >{{ data['semester'] }}(default)</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </td>
+
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2"><input type="submit" class="btn btn-primary" value="Edit"> </td>
+  </tr>
+
+</table>
+</form>
+</div>
+
+
+{% include 'PageFooter.html' %}

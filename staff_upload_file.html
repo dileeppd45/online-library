@@ -1,0 +1,39 @@
+
+{% include 'staffheader.html' %}
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+    <h2>Upload File</h2>
+<form id="form1" name="form1" method="post" action="/staff_uploading" enctype = "multipart/form-data">
+
+       <table class="table" >
+
+             <tr>
+                <th> <label class="text-success">File  :</label></th>
+                <td>
+                    <label>
+                        <input type="file" name="file" required />
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th><label class="text-success">Description  :</label></th>
+                <td>
+                    <label>
+                        <textarea type="text" name="description" placeholder="Reply Here" required></textarea>
+                    </label>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <label>
+                        <input type="submit" name="Submit" value="Upload"class="btn btn-primary" >
+                    </label>
+                </td>
+            </tr>
+        </table>
+
+</form>
+</div>
+
+{% include 'PageFooter.html' %}

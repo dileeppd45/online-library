@@ -1,0 +1,31 @@
+
+{% include 'staffheader.html' %}
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+<h2>View Degree</h2>
+
+<table style="width:100%" class="table" >
+  <tr>
+    <th>Sl no.</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Subjects</th>
+    <th></th>
+
+
+  </tr>
+{% for data in cdata %}
+  <tr>
+    <td> {{loop.index}}</td>
+    <td>  {{data['name']}}  </td>
+    <td>{{data['description']}}</td>
+    <td>
+      <a href="staff_view_subject?id={{ data['iddegree'] }}"> View Subject</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+
+{% include 'PageFooter.html' %}
+

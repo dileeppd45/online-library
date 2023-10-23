@@ -1,0 +1,43 @@
+
+{% include 'adminheader.html' %}
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+  <h2>Edit Staff</h2>
+  <form action="/admin_update_staff" method="post">
+<table style="width:80%" class="table">
+  <tr>
+    <th colspan="2">Edit staff</th>
+  </tr>
+  <input type="hidden" name="userid" value="{{ data['user_id']}}">
+  <tr>
+    <th>name</th>
+    <td><input type="text" value="{{ data['name'] }}" name="name" required></td>
+  </tr>
+  <tr>
+    <th>address</th>
+    <td><input type="text" name="address" value="{{ data['address'] }}" required></td>
+  </tr>
+  <tr>
+    <th>email</th>
+    <td><input type="text" name="email" value="{{ data['email'] }}" required></td>
+  </tr>
+  <tr>
+    <th>phone</th>
+    <td><input type="text" name="phone" value="{{ data['phone'] }}" required></td>
+  </tr>
+  <tr>
+    <th>password</th>
+    <td><input type="text" name="password" value="{{ data['password'] }}" required></td>
+  </tr>
+ <tr>
+    <td colspan="2"><input type="submit" class="btn btn-primary" value="edit"></td>
+  </tr>
+
+</table>
+</form>
+
+</div>
+
+
+{% include 'PageFooter.html' %}
+

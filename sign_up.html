@@ -1,0 +1,42 @@
+
+{% include 'regheader.html' %}
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+  <h2>Sign Up..</h2>
+  <form action="signup" method="post">
+    <table class="table">
+    <tr>
+      <td><input type="text" id="user_id" name="user_id" placeholder="user_id." required ></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="name" name="name" placeholder="name." required></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="email" name="email" placeholder="email." required></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="address" name="address" placeholder="Youraddress" required></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="pincode" name="pincode" placeholder="pincode." required></td>
+    </tr>
+    <tr>
+     <td><input type="text" id="phone" name="phone" placeholder="phone" required></td>
+    </tr>
+
+    <tr>
+      <td><input type="text" id="password" name="password" placeholder="password."required></td>
+    </tr>
+    <tr>
+      <td><input type="submit" value="Register" class="btn btn-primary"></td>
+    </tr>
+    </table>
+
+
+  </form>
+</div>
+{% include 'PageFooter.html' %}
+
+
+
+

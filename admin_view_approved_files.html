@@ -1,0 +1,46 @@
+
+{% include 'adminheader.html' %}
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+    <h2>Files</h2>
+    <table class="table">
+  <tr>
+    <th>Sl No.</th>
+    <th>Degree</th>
+    <th>Semester</th>
+    <th>Subject</th>
+      <th>Added By</th>
+    <th>Uploaded Date</th>
+      <th></th>
+      <th></th>
+    <th></th>
+
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{ loop.index}}</td>
+
+    <td>{{i['name']}}</td>
+
+    <td>{{i['semester']}}</td>
+
+    <td>{{i['s_name']}}</td>
+
+      <td>{{i['user_id']}}</td>
+
+
+    <td>{{i['upload_date']}}</td>
+    <td><a  href="approved_download_file?id={{i['file_path']}}">Download  </a></td>
+      <td>
+      <a href="/approved_update_file?id={{i['idnote']}}" >change status</a>
+    </td>
+
+
+
+ <td>
+     <a  href="approved_delete_file?id{{i['idnote']}}">remove</a>
+ </td>
+</tr>
+  {% endfor %}
+</table>
+</div>
+{% include 'PageFooter.html' %}

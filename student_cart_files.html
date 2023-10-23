@@ -1,0 +1,78 @@
+
+{% include 'studentheader.html' %}
+
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+<h2>Pending Files</h2>
+<table class="table">
+  <tr>
+    <th>Sl No.</th>
+    <th>Degree</th>
+    <th>Semester</th>
+    <th>Subject</th>
+    <th>File Path</th>
+    <th>Uploaded Date</th>
+    <th></th>
+    <th></th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{loop.index}}</td>
+
+    <td>{{i['name']}}</td>
+
+    <td>{{i['semester']}}</td>
+
+    <td>{{i['s_name']}}</td>
+
+    <td>{{i['file_path']}}</td>
+
+    <td>{{i['upload_date']}}</td>
+
+
+    <td><a  href="/pending_download_file?id={{i['file_path']}}">Download </a></td>
+    <td>
+      <a href="student_delete_file?id={{i['idnote']}}">Remove</a>
+    </td>
+
+
+  </tr>
+  {% endfor %}
+</table>
+</div>
+
+<div class="container" align="center" style=" min-height:50vh;">
+  <h2>Approved Files</h2>
+<table class="table">
+  <tr>
+    <th>Sl No.</th>
+    <th>Degree</th>
+    <th>Semester</th>
+    <th>Subject</th>
+    <th>File Path</th>
+    <th>Uploaded Date</th>
+    <th></th>
+
+  </tr>
+  {% for i in adata %}
+  <tr>
+    <td>{{loop.index }}</td>
+
+    <td>{{i['name']}}</td>
+
+    <td>{{i['semester']}}</td>
+
+    <td>{{i['s_name']}}</td>
+
+    <td>{{i['file_path']}}</td>
+
+    <td>{{i['upload_date']}}</td>
+
+    <td><a  href="/approved_download_file?id={{i['file_path']}}">Download</a></td>
+
+
+  </tr>
+  {% endfor %}
+</table>
+
+</div>
+{% include 'PageFooter.html' %}

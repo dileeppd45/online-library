@@ -1,0 +1,34 @@
+
+{% include 'studentheader.html' %}
+<div class="container" align="center" style=" min-height:50vh; margin-top:100px; margin-bottom: 75px;">
+  <h2>Approved Files</h2>
+<table class="table">
+  <tr><th colspan="5" style="color:#449d5b;">{{row['name']}}/SEMESTER{{row['semester']}}/{{row['s_name']}}</th></tr>
+  <tr>
+    <th>Sl No</th>
+
+    <th>File Name</th>
+    <th>Description</th>
+    <th>Uploaded By</th>
+    <th>Uploaded Date</th>
+    <th></th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{loop.index }}</td>
+
+    <td id="staticrem">{{i['file_path']}}</td>
+
+    <td>{{i['description']}}</td>
+    <td>{{i['user_id']}}</td>
+
+    <td>{{i['upload_date']}}</td>
+
+    <td><a  href="/approved_download_file?id={{i['file_path']}}">Download  </a></td>
+
+  </tr>
+  {% endfor %}
+</table>
+</div>
+
+{% include 'PageFooter.html' %}
