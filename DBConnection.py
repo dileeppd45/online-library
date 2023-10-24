@@ -1,7 +1,7 @@
 import mysql.connector
 class Db:
     def __init__(self):
-        self.cnx = mysql.connector.connect(host="master.herosite.pro", user="aghosh", password="farm2020",charset='utf8', database="aghosh_library_notes")
+        self.cnx = mysql.connector.connect(host="master.herosite.pro", user="#####", password="#####",charset='utf8', database="aghosh_library_notes")
         self.cur = self.cnx.cursor(dictionary=True)
 
 
